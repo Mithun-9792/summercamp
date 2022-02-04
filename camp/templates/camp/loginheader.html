@@ -1,0 +1,33 @@
+<body style="background-color: #9dffc2;">
+<!-- ############NAVBAR##################### -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <a class="navbar-brand" href="{{'loginhome'}}">
+                <img src="https://www.clipartmax.com/png/full/66-669687_summer-camp-graphic-design-logo-camping-summer-camp-graphic-design-logo-camping.png" alt="" width="100" height="70">
+            </a>
+        </div>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{'loginhome'}}">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    {% comment %} <a class="navbar-brand" aria-current="page" href="{{''}}">Home</a> {% endcomment %}
+                    <a class="navbar-brand" href="{{'editpro'}}">Update Profile</a>
+                    <a class="navbar-brand" href="{{'viewpro'}}">View Programs</a>
+                    <a class="navbar-brand" href="{{'add_details'}}">Add Programs</a>
+                    <a class="navbar-brand" href="{{'add_event'}}">Add Events</a>
+                    <a class="navbar-brand" href="{{'add_employment'}}">Add Employment</a>
+                    <a class="navbar-brand" href="{{'logout'}}">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+</body>

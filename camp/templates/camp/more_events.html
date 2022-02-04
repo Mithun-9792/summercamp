@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events List</title>
+    {% load static %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        strong,
+        h3 {
+            display: grid;
+            justify-content: center;
+        }
+        
+        table {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'camp/header.html' %}
+    <div class="container mt-4">
+        <h3>Events</h3>
+        {% comment %} <strong>Note:-Send Your Resume on Given E-Mail in the Table.</strong> {% endcomment %}
+        <table class="table table-bordered border-primary">
+            <thead>
+                <tr>
+                    <th scope="col">Event Id</th>
+                    <th scope="col">Event Name</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Address</th>
+                    {% comment %} <th scope="col">LastDateToApply</th> {% endcomment %}
+                    <th scope="col">Date</th>
+                    <th scope="col">Description</th>
+                    <!-- <th scope="col">image</th> -->
+
+                    <!-- <th scope="col">Last</th>
+                        <th scope="col">Handle</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for e in events %}
+                <tr>
+                    <td>{{e.event_id}}</td>
+                    <td>{{e.event_name}}</td>
+                    <td>{{e.city}}</td>
+                    <td>{{e.address}}</td>
+                    {% comment %} <td>{{e.LastDateToApply}}</td> {% endcomment %}
+                    <td>{{e.date}}</td>
+                    <td>{{e.description}}</td>
+                    <!-- <th><img src="media/{{s.student_pic}}" alt="" style="width: 100px; height: 100px;"></th> -->
+                </tr>
+                {% endfor %}
+
+            </tbody>
+        </table>
+
+    </div>
+    {% include 'camp/footer.html' %}
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+</body>
+
+</html>
